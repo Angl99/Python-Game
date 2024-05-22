@@ -2,7 +2,6 @@ import os
 
 os.system("")
 
-
 class HealthBar:
     symbol_remaining: str = "█"
     symbol_lost: str = "_"
@@ -46,6 +45,5 @@ class HealthBar:
               f"{self.color if self.is_colored else ''}"
               f"{remaining_bars * self.symbol_remaining}"
               f"{lost_bars * self.symbol_lost}"
-              f"{self.colors['default'] if self.is_colored else ''}"
-              f"{self.colors["default"]}"
+              f"{self.colors['default'] if self.is_colored else ''}"  # Corrected line
               f"{self.barrier}")
